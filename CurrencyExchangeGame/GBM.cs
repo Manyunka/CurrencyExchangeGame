@@ -29,6 +29,7 @@ namespace CurrencyExchangeGame
         {
             var wt = W.Last() + Math.Sqrt(dT) * NormalVR();
             var x = X.Last() * Math.Exp((Mu - Sigma * Sigma / 2) * dT + Sigma * wt);
+            W.Add(wt);
             X.Add(x);
             return x;
         }
